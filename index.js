@@ -3,7 +3,7 @@ const express = require('express');
 
 require('./api/airline/airline.model.js');
 require('./api/airport/airport.model.js');
-require('./api/flight/flight.model');
+require('./api/flight/flight.model.js');
 
 const configExpress = require('./config/express');
 const { connectDB } = require('./config/database');

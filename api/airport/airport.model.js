@@ -1,11 +1,12 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../../config/database');
 
-const airportSchema = sequelize.define('airport', {
-  id: {
-    type: DataTypes.INTEGER,
+const Flight = require('../flight/flight.model');
+
+const Airport = sequelize.define('airport', {
+  iata_code_airport: {
+    type: DataTypes.STRING,
     primaryKey: true,
-    autoIncrement: true,
   },
   airport_name: {
     type: DataTypes.STRING,
@@ -27,4 +28,17 @@ const airportSchema = sequelize.define('airport', {
   },
 });
 
-module.exports = airportSchema;
+Airport.hasOne(Flight, {
+  foreignKey: 'airport_origin_id',
+});
+Airport.hasOne(Flight, {
+  foreignKey: 'airport_destination_id',
+});
+Flight.belongsTo(Airport, {
+  foreignKey: 'airport_origin_id',
+});
+Flight.belongsTo(Airport, {
+  foreignKey: 'airport_destination_id',
+});
+
+module.exports = Airport;

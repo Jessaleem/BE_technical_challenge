@@ -1,18 +1,20 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../../config/database');
 
-const airlineSchema = sequelize.define('airline', {
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
+const Flight = require('../flight/flight.model');
+// const FlightAirline = require('../flight_airline/flight_airline.model');
+
+const AirlineSchema = sequelize.define('airline', {
   iata_code: {
     type: DataTypes.STRING,
+    primaryKey: true,
   },
   airline: {
     type: DataTypes.STRING,
   },
 });
 
-module.exports = airlineSchema;
+AirlineSchema.hasMany(Flight);
+Flight.belongsTo(AirlineSchema);
+
+module.exports = AirlineSchema;

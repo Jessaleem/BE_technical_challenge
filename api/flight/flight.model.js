@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../../config/database');
 
-const flightSchema = sequelize.define('flight', {
+const Flight = sequelize.define('flight', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -19,19 +19,10 @@ const flightSchema = sequelize.define('flight', {
   day_of_week: {
     type: DataTypes.INTEGER,
   },
-  ariline: {
-    type: DataTypes.STRING,
-  },
   flight_number: {
     type: DataTypes.INTEGER,
   },
   tail_number: {
-    type: DataTypes.STRING,
-  },
-  origin_airport: {
-    type: DataTypes.STRING,
-  },
-  destination_airport: {
     type: DataTypes.STRING,
   },
   scheduled_departure: {
@@ -118,3 +109,5 @@ const flightSchema = sequelize.define('flight', {
     defaultValue: 0,
   },
 });
+
+module.exports = Flight;
