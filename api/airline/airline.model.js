@@ -2,7 +2,6 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../../config/database');
 
 const Flight = require('../flight/flight.model');
-// const FlightAirline = require('../flight_airline/flight_airline.model');
 
 const AirlineSchema = sequelize.define('airline', {
   iata_code: {

@@ -29,84 +29,84 @@ const Flight = sequelize.define('flight', {
     type: DataTypes.INTEGER,
   },
   departure_time: {
-    type: DataTypes.DATE,
+    type: DataTypes.INTEGER,
   },
   departure_delay: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   taxi_out: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   wheels_off: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   scheduled_time: {
     type: DataTypes.INTEGER,
   },
   elapsed_time: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   air_time: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   distance: {
     type: DataTypes.INTEGER,
   },
   wheels_on: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   taxi_in: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   scheduled_arrival: {
     type: DataTypes.INTEGER,
   },
   arrival_time: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   arrival_delay: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   diverted: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   cancelled: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   cancellation_reason: {
     type: DataTypes.STRING,
-    defaultValue: 'A',
+    allowNull: true,
   },
   air_system_delay: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   security_delay: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   airline_delay: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   late_aircraft_delay: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
   weather_delay: {
     type: DataTypes.INTEGER,
-    defaultValue: 0,
+    allowNull: true,
   },
 });
 
