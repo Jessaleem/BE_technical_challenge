@@ -1,6 +1,6 @@
 ### Technical challenge Backend.
 
-Consist in develop an API on Node.js that allows to create, update, delete and get the data about airports, airlines, and flights.
+Consists of developing an API on Node.js that allows to create, update, delete and get the data about airports, airlines, and flights.
 
 #### Stack:
 - Node Js
